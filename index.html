@@ -32,7 +32,7 @@
                 <li><strong>{{title[0]}}</strong>: {{userValue.rank}}</li>
                 <li><strong>{{title[1]}}</strong>: {{userValue.title}}</li>
                 <li><strong>{{title[2]}}</strong>: {{userValue.installs}}</li>
-                <li><strong>{{title[3]}}</strong>: {{userValue.average}}</li>
+                <li><strong>{{title[3]}}</strong>: {{userValue.average}} Stars</li>
                 <li><strong>{{title[4]}}</strong>: ${{userValue.price}}</li>
                 <li><strong>{{title[5]}}</strong>: {{userValue.category}}</li>
             </ul>
@@ -41,7 +41,7 @@
 
         <!--TABLE WHICH HOLDS RESULT-->
         <div class="tableTitle">
-            <h2>Top 100 Android Games</h2>
+            <h2>Top 50 Android Games</h2>
         </div>
 
         <div class="tableContent">
@@ -68,7 +68,7 @@
                             {{installsData[$index]}}
                         </td>
                         <td>
-                            {{averageData[$index]}}
+                            {{averageData[$index]}} Stars
                         </td>
                         <td>
                             ${{priceData[$index]}}

@@ -120,10 +120,13 @@ footer{
     font-weight: bold;
     background-color:#234295;
     margin-top: 2%;
+    padding: .65%;
 }
-h2{
+footer h2{
     margin: auto;
-    color: #234295;
+    color: white;
+    font-style: italic;
+
 }
 
 
