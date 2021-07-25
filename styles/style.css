@@ -11,7 +11,7 @@
 
 * ::-webkit-scrollbar {
     display: none;
-  }
+}
 
 /*
     PAGE MARGIN
@@ -27,15 +27,21 @@
 */
 
 .top {
-    text-align: center;
-    color     : white;
-    font-weight: bold;
-    background-color:#234295;
-    margin-bottom: 2%;
+    text-align      : center;
+    color           : white;
+    font-weight     : bold;
+    background-color: #234295;
+    margin-bottom   : 2%;
+    
+}
+
+.top h1{
+    font-size         :3em;
 }
 
 .top p {
     font-style: italic;
+    font-size         : 1.25em;
 }
 
 /*
@@ -43,8 +49,32 @@
 */
 
 form {
-    margin       : auto;
+    text-align: center;
     margin-bottom: 2%;
+}
+
+input[type=search]{
+    border       : none;
+    border-bottom: #234295 4px solid;
+    font-size    : 1.5em;
+    text-align   : center;
+    font-weight  : bold;
+    color        : #234295;
+    font-style   : italic;
+    background: none;
+}
+
+input[type=submit]{
+    color        : white;
+    font-weight: bold;
+    border-radius: 15px;
+    background-color: #234295;
+    width: 18%;
+    padding: 1%;
+}
+
+input[type=submit]:hover{
+    opacity: .87;
 }
 
 /*
@@ -56,14 +86,15 @@ form {
     margin : auto;
 }
 
-.searchResults h1{
-    text-align: center;
-    color: #234295;
-    font-weight: bold;
+.searchResults h1 {
+    text-align     : center;
+    color          : #234295;
+    font-weight    : bold;
     text-decoration: underline;
+    font-style: italic;
 }
 
-.searchResults strong{
+.searchResults strong {
     color: #234295;
 }
 
@@ -86,12 +117,12 @@ form {
     display: grid;
     margin : auto;
     width  : 50%;
-    
+
 }
 
 .tableTitle h2 {
-    text-align: center;
-    color: #234295;
+    text-align : center;
+    color      : #234295;
     font-weight: bold;
 }
 
@@ -102,11 +133,13 @@ table tr th {
     font-weight   : bold;
     text-align    : center;
     text-transform: capitalize;
+    font-size         : 1.20em;
 }
 
 table tr td {
-    border-right: #234295 solid 2px;
+    border-right: #234295 solid 5px;
     text-align  : center;
+    font-size         : 1.20em;
 }
 
 
@@ -114,28 +147,46 @@ table tr td {
 /*
     Footer
 */
-footer{
-    text-align: center;
-    color     : white;
-    font-weight: bold;
-    background-color:#234295;
-    margin-top: 2%;
-    padding: .65%;
+footer {
+    text-align      : center;
+    color           : white;
+    font-weight     : bold;
+    background-color: #234295;
+    margin-top      : 2%;
+    padding         : .65%;
 }
-footer h2{
-    margin: auto;
-    color: white;
+
+footer h2 {
+    margin    : auto;
+    color     : white;
     font-style: italic;
 
 }
 
 
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:700px) {
     .tableContent {
-        display: grid;
-        margin : auto;
-        width  : 85%;
-        overflow-x:auto;
+        display   : grid;
+        margin    : auto;
+        width     : 85%;
+        overflow-x: auto;
     }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    input[type=search]{
+        text-align: center;
+    }
+    
+    input[type=submit]{
+        width: 50%;
+        margin-top: 2%;
+    }
+    
 }
