@@ -15,10 +15,35 @@
 <body ng-controller="Display" id="pageContent">
 
     <div class="inputContent">
-        <form >
-            
+        <div class="top">
+            <h1>Record Viewer</h1>
+            <p>Enter a Record number to pull up that information</p>
+        </div>
+        <form name="searchUser" id="form">
+            <!--VALUE IS ASSIGNED TO USERNAME WHEN IT IS CREATED AS A MODEL-->
+            <input type="search" id="check" placeholder="Enter a Record Number" ng-Model="searchName">
+            <input type="submit" value="Search" ng-click="search(searchName)" required>
         </form>
+
+        <div class="searchResults" id="records">
+            <h1>Record {{record}}</h1>
+
+            <ul>
+                <li><strong>{{title[0]}}</strong>: {{userValue.rank}}</li>
+                <li><strong>{{title[1]}}</strong>: {{userValue.title}}</li>
+                <li><strong>{{title[2]}}</strong>: {{userValue.installs}}</li>
+                <li><strong>{{title[3]}}</strong>: {{userValue.average}}</li>
+                <li><strong>{{title[4]}}</strong>: ${{userValue.price}}</li>
+                <li><strong>{{title[5]}}</strong>: {{userValue.category}}</li>
+            </ul>
+
+        </div>
+
         <!--TABLE WHICH HOLDS RESULT-->
+        <div class="tableTitle">
+            <h2>Top 100 Android Games</h2>
+        </div>
+
         <div class="tableContent">
             <table class="table">
                 <thead>
@@ -29,7 +54,6 @@
                         <th>{{title[3]}}</th>
                         <th>{{title[4]}}</th>
                         <th>{{title[5]}}</th>
-                        <th>{{title[6]}}</th>
                     </tr>
                 </thead>
                 <tbody ng-repeat="obj in data.rank">
@@ -52,14 +76,15 @@
                         <td>
                             {{categoryData[$index]}}
                         </td>
-                        <td>
-                            {{paidData[$index]}}
-                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+
+    <footer>
+        <h2>&copy;Jose Amarante</h2>
+    </footer>
 </body>
 
 <!--JQUERY LIBRARY-->

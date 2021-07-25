@@ -1,11 +1,80 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+    margin            : 0;
+    padding           : 0;
+    font-family       : Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior   : smooth;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+
+    /* Firefox */
 }
+
+* ::-webkit-scrollbar {
+    display: none;
+  }
 
 /*
     PAGE MARGIN
 */
+.inputContent {
+    display: grid;
+}
+
+/*
+    HEADER
+
+    
+*/
+
+.top {
+    text-align: center;
+    color     : white;
+    font-weight: bold;
+    background-color:#234295;
+    margin-bottom: 2%;
+}
+
+.top p {
+    font-style: italic;
+}
+
+/*
+    FORM
+*/
+
+form {
+    margin       : auto;
+    margin-bottom: 2%;
+}
+
+/*
+    SEARCH RESULTS
+*/
+
+.searchResults {
+    display: grid;
+    margin : auto;
+}
+
+.searchResults h1{
+    text-align: center;
+    color: #234295;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.searchResults strong{
+    color: #234295;
+}
+
+.searchResults li {
+    list-style-type: none;
+}
+
+.searchResults strong {
+    text-transform: capitalize;
+}
+
 
 
 /*
@@ -13,28 +82,57 @@
 */
 
 
-.tableContent{
+.tableContent {
     display: grid;
-    margin: auto;
-    width: 50%;
+    margin : auto;
+    width  : 50%;
+    
+}
+
+.tableTitle h2 {
+    text-align: center;
+    color: #234295;
+    font-weight: bold;
 }
 
 
 
 table tr th {
-    color      : #654596;
-    font-weight: bold;
-    text-align: center;
+    color         : #234295;
+    font-weight   : bold;
+    text-align    : center;
     text-transform: capitalize;
 }
 
-table tr td{
-    border-right: #654596 solid 5px;
+table tr td {
+    border-right: #234295 solid 2px;
+    text-align  : center;
+}
+
+
+
+/*
+    Footer
+*/
+footer{
     text-align: center;
+    color     : white;
+    font-weight: bold;
+    background-color:#234295;
+    margin-top: 2%;
+}
+h2{
+    margin: auto;
+    color: #234295;
 }
 
-table{
-    margin-left: auto;
-    margin-right: auto;
-}
 
+
+@media screen and (max-width:600px) {
+    .tableContent {
+        display: grid;
+        margin : auto;
+        width  : 85%;
+        overflow-x:auto;
+    }
+}

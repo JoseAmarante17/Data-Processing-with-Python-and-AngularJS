@@ -19,7 +19,7 @@ df = pd.read_csv('./dataset/android-games.csv')
 df.drop_duplicates(keep=False,inplace=True)
 
 # Drop uncessary Fields and returns a cleaned DataFrame
-cleanedData = df.drop(columns=['total ratings','growth (30 days)','growth (60 days)','5 star ratings','4 star ratings','3 star ratings','2 star ratings','1 star ratings'])
+cleanedData = df.drop(columns=['total ratings','growth (30 days)','growth (60 days)','5 star ratings','4 star ratings','3 star ratings','2 star ratings','1 star ratings','paid'])
 
 
 # In[22]:
