@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*
+    PAGE MARGIN
+*/
+
+
+/*
+    TABLE AREA
+*/
+
+
+.tableContent{
+    display: grid;
+    margin: auto;
+    width: 50%;
+}
+
+
+
+table tr th {
+    color      : #654596;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+table tr td{
+    border-right: #654596 solid 5px;
+    text-align: center;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+

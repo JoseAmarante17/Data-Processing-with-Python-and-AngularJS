@@ -10,13 +10,10 @@ import pandas as pd
 
 # Read CSV FILE
 
-df = pd.read_csv('android-games.csv')
+df = pd.read_csv('./dataset/android-games.csv')
 
 
 # In[21]:
-
-# Sorts Values
-df.sort_values("title", inplace = True)
 
 # Inspect CSV for duplicates. And if duplicate is found delete it.
 df.drop_duplicates(keep=False,inplace=True)
@@ -28,5 +25,5 @@ cleanedData = df.drop(columns=['total ratings','growth (30 days)','growth (60 da
 # In[22]:
 
 
-# returns JSON
-cleanedData.to_json('android-games.json')
+# returns JSON file with the first 500 records
+cleanedData.head(10).to_json('.\json/android-games.json')
