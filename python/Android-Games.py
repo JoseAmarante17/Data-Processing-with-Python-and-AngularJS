@@ -26,4 +26,6 @@ cleanedData = df.drop(columns=['total ratings','growth (30 days)','growth (60 da
 
 
 # returns JSON file with the first 500 records
-cleanedData.head(10).to_json('.\json/android-games.json')
+cleanedData.head(100).to_json('.\json/android-games.json')
+
+# %%
