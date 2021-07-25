@@ -15,6 +15,9 @@
 <body ng-controller="Display" id="pageContent">
 
     <div class="inputContent">
+        <form >
+            
+        </form>
         <!--TABLE WHICH HOLDS RESULT-->
         <div class="tableContent">
             <table class="table">
@@ -44,13 +47,13 @@
                             {{averageData[$index]}}
                         </td>
                         <td>
-                            {{priceData[$index]}}
+                            ${{priceData[$index]}}
                         </td>
                         <td>
                             {{categoryData[$index]}}
                         </td>
                         <td>
-                            ${{paidData[$index]}}
+                            {{paidData[$index]}}
                         </td>
                     </tr>
                 </tbody>
